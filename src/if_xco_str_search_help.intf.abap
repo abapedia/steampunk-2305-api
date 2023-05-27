@@ -1,0 +1,18 @@
+INTERFACE if_xco_str_search_help PUBLIC.
+  DATA:
+    component TYPE REF TO if_xco_str_component READ-ONLY.
+
+  METHODS:
+    exists
+      IMPORTING
+        io_read_state    TYPE REF TO cl_xco_ad_object_read_state OPTIONAL
+        io_origin        TYPE REF TO cl_xco_tab_origin OPTIONAL
+          PREFERRED PARAMETER io_read_state
+      RETURNING
+        VALUE(rv_exists) TYPE abap_bool,
+    content
+      IMPORTING
+        io_read_state     TYPE REF TO cl_xco_ad_object_read_state OPTIONAL
+      RETURNING
+        VALUE(ro_content) TYPE REF TO if_xco_str_search_help_content.
+ENDINTERFACE.

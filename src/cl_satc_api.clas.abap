@@ -1,0 +1,12 @@
+CLASS cl_satc_api DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PRIVATE.
+
+  PUBLIC SECTION.
+    CLASS-METHODS create_api_factory
+      RETURNING VALUE(api_factory) TYPE REF TO if_satc_api_factory.
+ENDCLASS.
+
+CLASS cl_satc_api IMPLEMENTATION.
+ENDCLASS.
